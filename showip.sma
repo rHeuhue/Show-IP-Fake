@@ -1,12 +1,12 @@
 #include <amxmodx>
 #include <fvault>
 
-new g_iMaxPlayers, szFakeIP[33][16]
+new g_iMaxPlayers, szFakeIP[MAX_PLAYERS + 1][MAX_IP_LENGTH]
 new const szVaultFile[] = "Players_IPs"
 
 public plugin_init()
 {
-	register_plugin("Show IP", "1.0", "Huehue")
+	register_plugin("Show IP", "1.0", "Huehue, TheRedShoko")
 	
 	register_concmd("amx_showip", "ShowIPs")
 	register_concmd("amx_checkip", "CheckIP", .info="<Nick> - shows last IP connected to the nick")
